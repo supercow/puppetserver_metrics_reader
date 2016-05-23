@@ -10,7 +10,9 @@ it is much easier to read than the raw JSON.
 
 ```
 root@puppetserver:~ $ curl -k https://localhost:8140/status/v1/services?level=debug > metrics.json
-root@puppetserver:~/src/puppetserver_metrics_reader $ bundle exec ./puppetserver_metrics_reader ../../metrics.json
+root@puppetserver:~ $ cd src/puppetserver_metrics_reader
+root@puppetserver:~/src/puppetserver_metrics_reader $ bundle install
+root@puppetserver:~/src/puppetserver_metrics_reader $ bundle exec ./puppetserver_metrics_reader ~/metrics.json
 
 +---------------------------+--------------------+
 |              JRuby Status Summary              |
